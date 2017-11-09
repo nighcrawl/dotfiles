@@ -41,3 +41,8 @@
   "symbols-view-plus":
     plusConfigurations:
       updateProjectTagsOnFileChange: true
+  "tree-view-breadcrumb":
+    displayProjectRoot: true
+    displayProjectRootName: true
+    keepBreadcrumbVisible: true
+    pathStyle: true

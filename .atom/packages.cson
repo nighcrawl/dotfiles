@@ -1,0 +1,9 @@
+packages: [
+  "atom-clock"
+  "ftp-remote-edit"
+  "mariana-syntax"
+  "minimap"
+  "monokai"
+  "package-sync"
+  "tree-view-breadcrumb"
+]
