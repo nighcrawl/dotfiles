@@ -1,0 +1,43 @@
+"*":
+  "atom-clock":
+    dateFormat: "ddd DD MMM YYYY, HH:mm"
+    locale: "fr"
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "mariana-syntax"
+    ]
+  editor:
+    fontSize: 12
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "3b434e5e-6084-43b4-bf52-9ce23617420a"
+  "ftp-remote-edit":
+    config: "89930b330890c08b538d36abd5c313a113d39b21c31b7df19ff15ab69d94d41d0c2418a55d410394de75d5c339a0c60efc3a2822d79fae67bacd2f14fbb75eebb49354faaf00a994cebc40fb95c15cd0d4e9255fa3f56c31f7f603f2eea920c0243137e5a64f21dd1090e70b1edc0131c8d1ba9de4aaf5286cedd6b6123589e2c47f9e5638d59b928ad616c5433cb3c758d5879da6e0888d620d4a8be7e2200d6059973e127a6b57d880b6505d757a7b3634f25b495bc8d4cd3d322c609c76064f8a0f0a15c5e9b87d823a3d7ef70a82b08c129caca364119d8cb72765db1ba86159331beb57d332382a5a72aa846f07607c4aa0e9e42464edf40905f1d9b38c68d287bd1283da2a0c527ad30ff40a065f05852fde15abb3cf0f24c3849a5664d06be169f534686581bd5b1e2f2aef70cd41a0df11de9f21d5e7a0f9b547426aa7db297f3ea4f23f1ceedc016119114dc5c753fb61297ef3431dac3bbe3a57af34a416874c44b51ebfc82fc36f00b6c4992449afd68c1f8ea9"
+    finder:
+      filterKeyForItem: "Path"
+    password: "93ab036c58cd9d88"
+    tree:
+      showOnRightSide: false
+  minimap:
+    adjustMinimapWidthOnlyIfSmaller: false
+    displayPluginsControls: false
+    moveCursorOnMinimapClick: true
+    scrollAnimation: true
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  "structure-view":
+    AutoscrollFromSource: true
+  "symbols-navigator":
+    autoRevealOnStart: true
+    position: "Right"
+  "symbols-view-plus":
+    plusConfigurations:
+      updateProjectTagsOnFileChange: true

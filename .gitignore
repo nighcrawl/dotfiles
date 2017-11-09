@@ -1,0 +1,7 @@
+# Atom sync
+.DS_Store
+/.atom/blob-store/
+/.atom/compile-cache/
+/.atom/packages/
+/.atom/storage/
+/.atom/remoteEdit.json
