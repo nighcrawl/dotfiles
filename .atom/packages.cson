@@ -1,6 +1,12 @@
 packages: [
   "atom-clock"
+  "atom-ide-ui"
   "ftp-remote-edit"
+  "ide-css"
+  "ide-html"
+  "ide-json"
+  "ide-php"
+  "ide-python"
   "mariana-syntax"
   "minimap"
   "monokai"
