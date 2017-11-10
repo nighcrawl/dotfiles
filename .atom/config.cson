@@ -2,6 +2,11 @@
   "atom-clock":
     dateFormat: "ddd DD MMM YYYY, HH:mm"
     locale: "fr"
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      autoVisibility: true
+      showDiagnosticTraces: true
+      showDirectoryColumn: true
   core:
     telemetryConsent: "no"
     themes: [
@@ -25,6 +30,8 @@
     password: "93ab036c58cd9d88"
     tree:
       showOnRightSide: false
+  "ide-php":
+    phpPath: "/usr/local/Cellar/php71/7.1.11_22/bin/php"
   minimap:
     adjustMinimapWidthOnlyIfSmaller: false
     displayPluginsControls: false
