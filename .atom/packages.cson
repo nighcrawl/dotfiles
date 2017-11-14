@@ -1,11 +1,14 @@
 packages: [
   "atom-clock"
+  "atom-ide-ui"
   "emmet"
   "ftp-remote-edit"
+  "ide-php"
   "language-smarty"
   "mariana-syntax"
   "minimap"
   "monokai"
   "package-sync"
+  "php-cs-fixer"
   "tree-view-breadcrumb"
 ]
