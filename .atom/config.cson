@@ -76,6 +76,12 @@
     displayProjectRootName: true
     keepBreadcrumbVisible: true
     pathStyle: true
+".js.regexp.replacement.source":
+  editor:
+    tabLength: 2
 ".js.source":
   editor:
-    tabType: "auto"
+    tabType: "soft"
+".jsdoc.source":
+  editor:
+    tabType: "soft"

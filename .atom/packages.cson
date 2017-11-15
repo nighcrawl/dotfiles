@@ -1,4 +1,5 @@
 packages: [
+  "atom-beautify"
   "atom-clock"
   "atom-ide-ui"
   "emmet"
