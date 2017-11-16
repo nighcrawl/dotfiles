@@ -5,8 +5,23 @@
 	],
 	"installed_packages":
 	[
+		"ApacheConf.tmLanguage",
+		"AutoFileName",
+		"EditorConfig",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"Github Color Theme",
+		"Indent XML",
+		"jQuery",
 		"Package Control",
+		"Phpcs",
+		"RemoteEdit",
+		"RemoteOpen",
+		"Sass",
 		"SFTP",
-		"SublimeLinter"
+		"Simple FTP Deploy",
+		"Theme - Soda",
+		"Theme - Spacegray"
 	]
 }

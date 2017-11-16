@@ -1,13 +1,21 @@
 {
+	"adaptive_dividers": true,
 	"always_show_minimap_viewport": true,
+	"auto_complete_cycle": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/SublimeLinter/Mariana (SL).tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
+	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": false,
+	"font_face": "Source Code Pro",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal"
 	],
 	"indent_to_bracket": true,
 	"line_padding_bottom": 4,
@@ -20,6 +28,7 @@
 	"overlay_scroll_bars": "enabled",
 	"scroll_past_end": true,
 	"show_definitions": false,
+	"show_encoding": true,
 	"tab_size": 4,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
