@@ -60,6 +60,8 @@
     executablePath: "/usr/local/bin/php-cs-fixer"
     executeOnSave: true
     showInfoNotifications: true
+  "pretty-json":
+    prettifyOnSaveJSON: true
   "standard-formatter":
     formatOnSave: true
     style: "semi-standard"

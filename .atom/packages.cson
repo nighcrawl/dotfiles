@@ -11,5 +11,6 @@ packages: [
   "monokai"
   "package-sync"
   "php-cs-fixer"
+  "pretty-json"
   "tree-view-breadcrumb"
 ]
