@@ -5,13 +5,15 @@
 	],
 	"installed_packages":
 	[
-		"ApacheConf.tmLanguage",
+		"ApacheConf",
 		"AutoFileName",
 		"EditorConfig",
 		"Emmet",
 		"Git",
 		"GitGutter",
 		"Github Color Theme",
+		"Gitignore",
+		"Gitignored File Excluder",
 		"Indent XML",
 		"jQuery",
 		"Package Control",

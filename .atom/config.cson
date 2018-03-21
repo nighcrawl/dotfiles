@@ -1,8 +1,14 @@
 "*":
+  "atom-beautify":
+    js:
+      break_chained_methods: true
+      jslint_happy: true
   "atom-clock":
     dateFormat: "ddd DD MMM YYYY, HH:mm"
     locale: "fr"
   "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
     "atom-ide-diagnostics-ui":
       autoVisibility: true
       showDiagnosticTraces: true
@@ -13,10 +19,21 @@
     hyperclick:
       darwinTriggerKeys: "shiftKey,metaKey"
     use:
-      "atom-ide-diagnostics-ui": false
+      "atom-ide-diagnostics-ui": "always"
   "atom-package-deps":
     ignored: []
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
@@ -28,19 +45,22 @@
     scrollPastEnd: true
     showIndentGuide: true
     softWrap: true
+    softWrapHangingIndent: 4
     tabLength: 4
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "3b434e5e-6084-43b4-bf52-9ce23617420a"
+  "fold-comments":
+    autofold: true
   "ftp-remote-edit":
-    config: "89930b330890c08b538d36abd5c313a113d39b21c31b7df19ff15ab69d94d41d0c2418a55d410394de75d5c339a0c60efc3a2822d79fae67bacd2f14fbb75eebb49354faaf00a994cebc40fb95c15cd0d4e9255fa3f56c31f7f603f2eea920c0243137e5a64f21dd1090e70b1edc0131c8d1ba9de4aaf5286cedd6b6123589e2c47f9e5638d59b928ad616c5433cb3c758d5879da6e0888d620d4a8be7e2200d6059973e127a6b57d880b6505d757a7b3634f25b495bc8d4cd3d322c609c76064f8a0f0a15c5e9b87d823a3d7ef70a82b08c129caca364119d8cb72765db1ba86159331beb57d332382a5a72aa846f07607c4aa0e9e42464edf40905f1d9b38c68d287bd1283da2a0c527ad30ff40a065f05852fde15abb3cf0f24c3849a5664d06be169f534686581bd5b1e2f2aef70cd41a0df11de9f21d5e7a0f9b547426aa7db297f3ea4f23f1ceedc016119114dc5c753fb61297ef3431dac3bbe3a57af34a416874c44b51ebfc82fc36f00b6c4992449afd68c1f8ea9"
+    config: "89930b330890c08b538d39a4c8be5be60dd9843a910373b784ae18ecd6cc97120a6704e85b4e40d3897694d222efde00fc666525d0d8e667b4dd744daaf80cc1a19b50fab900b098ceac47cb8ec71f8183f24c05dbf24b10f2d323e5bbc360ba233e39ce802b5f8931b9f64a749c2d2cf9cce7eeb6f4be2d6bedc3ff4d389dfecd369e1c689ec1d18cd610cf4e3ff8911fd8cbdef6e3dd88704f5396f0b46f4e230090214b237055d8d4a20e522275767438b2000047d991f1363a75278d350d4fc84c0f1f94a7b82ec235113eb74b8fa78e0dcbf3af6f1183dab93f37d01aec724d784db80e92633a6b406cedda6f4d2d6753f1b0b65921ade01115f0d9a58c71de87ad15b3c12c4f032dc866ae72017824800afe02fed98f7523cc8ab17000ae3fc040e4750225ada06a037259bd2e8644a7df0497c02cc1fba9b0b50d1221fd982f7f38aeff3c57b89b0c2d5a414e90c241b9783469a50c5eef62b62a19b336a017924a5bee49a3887b886300b0d4c83008a9d9c8628386296def788b04be6ee4252c09de961dc255201032727affc15a1bead594d70274270ee65e82224e9c6187fa5028565b9ebb77c8acaddc12f3c291e704e507bd30f62b3583ed31f47e8df71ef2fb4c438ab8da28b4f76489f68855f39a95fec2ac85265749132a00a3c0d76bfb59f73f5f222d7cc97723ce52eb0647e6d4c1617587cdeeb1747de435a9622edbaec3eac1d7fe482a7baadae244c7cf0191daf294a80c555bde5aa7fa710478"
     finder:
       filterKeyForItem: "Path"
     password: "93ab036c58cd9d88"
     tree:
       showOnRightSide: false
   "ide-php":
-    phpPath: "/usr/bin/php"
+    phpPath: "/usr/local/opt/php72/bin/php"
   "linter-js-standard":
     lintMarkdownFiles: true
     showEslintRules: true
@@ -59,12 +79,25 @@
   "php-cs-fixer":
     executablePath: "/usr/local/bin/php-cs-fixer"
     executeOnSave: true
+    rules: "@PSR2,no_short_echo_tag,indentation_type"
     showInfoNotifications: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
+    prettierEslintOptions:
+      prettierLast: true
+    prettierOptions:
+      jsxBracketSameLine: true
+      trailingComma: "es5"
+    useEslint: true
   "pretty-json":
     prettifyOnSaveJSON: true
+  react: {}
   "standard-formatter":
+    checkStyleDevDependencies: true
     formatOnSave: true
-    style: "semi-standard"
+    style: "happiness"
   "structure-view":
     AutoscrollFromSource: true
   "symbols-navigator":
@@ -78,6 +111,8 @@
     displayProjectRootName: true
     keepBreadcrumbVisible: true
     pathStyle: true
+  "xml-formatter":
+    useTab: "true"
 ".js.regexp.replacement.source":
   editor:
     tabLength: 2
