@@ -6,20 +6,36 @@
   "atom-clock":
     dateFormat: "ddd DD MMM YYYY, HH:mm"
     locale: "fr"
+  "atom-ctags":
+    GotoSymbolClick: "middle click"
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnSave: true
     "atom-ide-diagnostics-ui":
-      autoVisibility: true
       showDiagnosticTraces: true
-      showDirectoryColumn: true
     "atom-ide-find-references":
       defaultLocationForPane: "center"
     "atom-ide-outline-view": {}
+    "debugger-exceptionBreakpointsCollapsed": false
     hyperclick:
       darwinTriggerKeys: "shiftKey,metaKey"
     use:
+      "atom-ide-busy-signal": "default"
+      "atom-ide-code-actions": "default"
+      "atom-ide-code-format": "default"
+      "atom-ide-code-highlight": "default"
+      "atom-ide-console": "default"
+      "atom-ide-datatip": "default"
+      "atom-ide-debugger": "default"
+      "atom-ide-definitions": "default"
+      "atom-ide-diagnostics": "default"
       "atom-ide-diagnostics-ui": "always"
+      "atom-ide-find-references": "default"
+      "atom-ide-global": "default"
+      "atom-ide-outline-view": "default"
+      "atom-ide-signature-help": "default"
+      "atom-ide-terminal": "default"
+      hyperclick: "default"
   "atom-package-deps":
     ignored: []
   core:
@@ -34,6 +50,9 @@
       "source.python": [
         "BUCK"
       ]
+    disabledPackages: [
+      "symbols-view"
+    ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
@@ -60,7 +79,7 @@
     tree:
       showOnRightSide: false
   "ide-php":
-    phpPath: "/usr/local/opt/php72/bin/php"
+    phpPath: "/usr/local/opt/php/bin/php"
   "linter-js-standard":
     lintMarkdownFiles: true
     showEslintRules: true
@@ -73,6 +92,7 @@
     displayPluginsControls: false
     moveCursorOnMinimapClick: true
     scrollAnimation: true
+  "one-dark-ui": {}
   "package-sync":
     createOnChange: true
     forceOverwrite: true
@@ -81,6 +101,14 @@
     executeOnSave: true
     rules: "@PSR2,no_short_echo_tag,indentation_type"
     showInfoNotifications: true
+  "php-debug":
+    showWelcome: false
+  pigments:
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
+    markerType: "native-square-dot"
+    mergeColorDuplicates: true
+    sassShadeAndTintImplementation: "bourbon"
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
