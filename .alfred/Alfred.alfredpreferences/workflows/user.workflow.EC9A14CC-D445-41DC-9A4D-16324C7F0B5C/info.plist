@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>ibk.server.start</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -23,7 +23,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Ange Chierchia</string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
@@ -32,21 +32,6 @@
 	<string>Start Working on Ibakus' Symfony</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>cd ~/Works/ibakus.com/htdocs &amp;&amp; mysql.server start &amp;&amp; bin/console server:start &amp;&amp; atom .</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
-			<key>uid</key>
-			<string>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -65,6 +50,21 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>B11B132B-4A61-4C05-8F4F-2111F454E6C6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>cd ~/Works/ibakus.com/htdocs &amp;&amp; mysql.server start &amp;&amp; bin/console server:start &amp;&amp; atom .</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -89,6 +89,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>chierchia.fr</string>
 </dict>
 </plist>
