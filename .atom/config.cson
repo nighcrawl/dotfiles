@@ -53,6 +53,7 @@
     disabledPackages: [
       "symbols-view"
     ]
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
