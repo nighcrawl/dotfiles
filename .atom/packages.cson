@@ -8,6 +8,7 @@ packages: [
   "emmet"
   "fold-comments"
   "ftp-remote-edit"
+  "git-plus"
   "ide-html"
   "ide-php"
   "ide-typescript"
