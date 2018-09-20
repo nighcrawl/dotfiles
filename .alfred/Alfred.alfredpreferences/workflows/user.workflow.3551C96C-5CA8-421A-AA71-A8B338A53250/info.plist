@@ -9,7 +9,18 @@
 	<key>connections</key>
 	<dict>
 		<key>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>20D37593-B6E9-4F71-8639-A698323E2F0F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B11B132B-4A61-4C05-8F4F-2111F454E6C6</key>
 		<array>
 			<dict>
@@ -37,21 +48,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>cd ~/Works/ibakus.com/htdocs &amp;&amp; mysql.server stop &amp;&amp; bin/console server:stop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
-			<key>uid</key>
-			<string>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -70,11 +66,54 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Local Server stopped</string>
+				<key>title</key>
+				<string>Ibakus Dev</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>20D37593-B6E9-4F71-8639-A698323E2F0F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>cd ~/Works/ibakus.com/htdocs &amp;&amp; mysql.server stop &amp;&amp; bin/console server:stop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>20D37593-B6E9-4F71-8639-A698323E2F0F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>450</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
 		<key>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</key>
 		<dict>
 			<key>xpos</key>
