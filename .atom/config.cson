@@ -52,6 +52,7 @@
       ]
     disabledPackages: [
       "symbols-view"
+      "php-twig"
     ]
     restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
@@ -60,7 +61,7 @@
       "mariana-syntax"
     ]
   editor:
-    fontSize: 12
+    fontSize: 13
     preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
@@ -93,7 +94,8 @@
     displayPluginsControls: false
     moveCursorOnMinimapClick: true
     scrollAnimation: true
-  "one-dark-ui": {}
+  "one-dark-ui":
+    stickyHeaders: true
   "package-sync":
     createOnChange: true
     forceOverwrite: true
