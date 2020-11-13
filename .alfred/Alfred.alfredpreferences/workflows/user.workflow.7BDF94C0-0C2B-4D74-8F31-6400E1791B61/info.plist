@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.ia.vhost</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>47860E20-5E32-4050-90A9-32903C065972</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8D36F0E8-F54F-410A-A557-F842A7DC2321</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Ange Chierchia</string>
+	<key>description</key>
+	<string>Create a new virtual host</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>New Vhost</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+cp /etc/apache2/sites-available/frontendstarter.conf /etc/apache2/sites-available/$query.tmp
+cd /etc/apache2/sites-available/
+sed 's/frontendstarter/"$query"/g' $query.tmp &gt; $query.conf
+rm -rf $query.tmp</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8D36F0E8-F54F-410A-A557-F842A7DC2321</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>vhost</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Create new vhost</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>47860E20-5E32-4050-90A9-32903C065972</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>47860E20-5E32-4050-90A9-32903C065972</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>195</integer>
+		</dict>
+		<key>8D36F0E8-F54F-410A-A557-F842A7DC2321</key>
+		<dict>
+			<key>xpos</key>
+			<integer>420</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
