@@ -64,8 +64,10 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>query="{query}"
- ~/Repositories/$query
-code .</string>
+cd ~/Repositories/$query
+code .
+cd wp-content/themes/iawp-child
+gulp watch</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

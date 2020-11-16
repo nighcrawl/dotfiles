@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>ac.dotfiles.update</string>
+	<string>ac.dotfiles.upgrade</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -31,7 +31,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Update dotfiles</string>
+	<string>Upgrade dotfiles</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -40,7 +40,10 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>cd ~/.dotfiles &amp;&amp; git pull origin master</string>
+				<string>cd ~/.dotfiles
+git add .
+git commit -m "update dotfiles"
+git push origin master</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
@@ -53,13 +56,13 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>keyword</key>
-				<string>dotfiles_update</string>
+				<string>dotfiles_upgrade</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Update dotfiles</string>
+				<string>Upgrade dotfiles</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
