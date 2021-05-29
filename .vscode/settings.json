@@ -1,6 +1,5 @@
 {
-    "workbench.colorTheme": "Ayu One Dark Pro | Mirage",
-    "oneDarkPro.editorTheme": "ayu",
+  "oneDarkPro.editorTheme": "ayu",
     "oneDarkPro.bold": true,
     "editor.tokenColorCustomizations": {
         "[One Dark Pro]": {
@@ -24,12 +23,6 @@
     },
     
     "powermode.enabled": true,
-    /*/
-    "powermode.explosionDuration": 400,
-    "powermode.shakeIntensity": 0,
-    "powermode.presets": "flames",
-    "powermode.explosionSize": 4
-    */
     "powermode.enableStatusBarComboTimer": false,
     "powermode.enableShake": false,
     "powermode.customExplosions": [
@@ -49,7 +42,7 @@
     "editor.mouseWheelZoom": true,
     "debug.console.fontSize": 11,
     "explorer.confirmDelete": false,
-    "workbench.preferredDarkColorTheme": "Ayu One Dark Pro | Mirage",
+    "workbench.preferredDarkColorTheme": "One Dark Pro",
     "workbench.sideBar.location": "left",
     "editor.formatOnType": true,
     "editor.fontLigatures": true,
@@ -58,4 +51,5 @@
     "editor.tabSize": 2,
     "html.format.indentInnerHtml": true,
     "workbench.editor.highlightModifiedTabs": true,
+    "workbench.colorTheme": "One Dark Pro",
 }
