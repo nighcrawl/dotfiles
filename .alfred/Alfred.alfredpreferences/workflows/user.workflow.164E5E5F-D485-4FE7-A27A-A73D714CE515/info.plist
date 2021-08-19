@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.ac.dsstorekill</string>
+	<string>com.ac.nodekill</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -25,11 +25,11 @@
 	<key>createdby</key>
 	<string>Ange Chierchia</string>
 	<key>description</key>
-	<string>Supprime tous les .DS_Store dans le dossier `~/Repositories`</string>
+	<string>Supprime tous les dossiers node_modules dans `~/Repositories`</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>DS_Store Killer</string>
+	<string>Node Killer</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -38,9 +38,9 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>rmds</string>
+				<string>rmnode</string>
 				<key>subtext</key>
-				<string>Remove all .DS_Store files in the ~/Repositories` folder</string>
+				<string>Supprime tous les dossiers node_modules dans `~/Repositories`</string>
 				<key>text</key>
 				<string>DS_Store Killer</string>
 				<key>withspace</key>
@@ -62,7 +62,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>cd ~/Repositories
-find . -type f \( -name ".DS_Store" -o -name "._.DS_Store" \) -delete -print 2&gt;&amp;1 | grep -v "Permission denied"</string>
+find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
