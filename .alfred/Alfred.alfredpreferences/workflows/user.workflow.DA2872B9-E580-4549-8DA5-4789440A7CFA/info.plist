@@ -100,7 +100,7 @@
 				<key>keyword</key>
 				<string>dotfiles</string>
 				<key>subtext</key>
-				<string>Utilitaire pour mettre à jour ~/.dotfiles</string>
+				<string>Utilitaire pour améliorer/mettre à jour `~/.dotfiles`</string>
 				<key>text</key>
 				<string>Dotfiles Utility</string>
 				<key>withspace</key>

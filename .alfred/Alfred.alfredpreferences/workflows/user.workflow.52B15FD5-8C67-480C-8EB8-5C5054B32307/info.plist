@@ -8,13 +8,11 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>425953F0-1313-40DC-A352-5A7CF09F6806</key>
-		<array/>
 		<key>C0599899-ADDA-4673-96A5-3A353EF86396</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>425953F0-1313-40DC-A352-5A7CF09F6806</string>
+				<string>79079058-9663-4288-87A1-547379C0A9C7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -37,14 +35,34 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>query="{query}"
+cd ~/Repositories/$query
+code .
+cd wp-content/themes/iawp-child
+npm install
+gulp watch</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>79079058-9663-4288-87A1-547379C0A9C7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>workon</string>
+				<string>iawp</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Ouvre un site IAWP dans VSCode</string>
 				<key>text</key>
-				<string>Work on website</string>
+				<string>IAWP Launcher</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -55,43 +73,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query="{query}"
-cd ~/Repositories/$query
-code .
-cd wp-content/themes/iawp-child
-npm install
-gulp watch</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>425953F0-1313-40DC-A352-5A7CF09F6806</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>425953F0-1313-40DC-A352-5A7CF09F6806</key>
+		<key>79079058-9663-4288-87A1-547379C0A9C7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>220</integer>
+			<integer>275</integer>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
