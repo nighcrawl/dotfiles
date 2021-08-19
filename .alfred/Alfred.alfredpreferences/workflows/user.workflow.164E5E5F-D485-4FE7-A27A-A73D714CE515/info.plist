@@ -29,7 +29,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Node Killer</string>
+	<string>Node Modules Killer</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -42,7 +42,7 @@
 				<key>subtext</key>
 				<string>Supprime tous les dossiers node_modules dans `~/Repositories`</string>
 				<key>text</key>
-				<string>DS_Store Killer</string>
+				<string>Node Modules Killer</string>
 				<key>withspace</key>
 				<false/>
 			</dict>

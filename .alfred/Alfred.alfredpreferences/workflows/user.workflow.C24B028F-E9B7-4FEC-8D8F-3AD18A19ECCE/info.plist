@@ -40,7 +40,7 @@
 				<key>keyword</key>
 				<string>rmds</string>
 				<key>subtext</key>
-				<string>Remove all .DS_Store files in the ~/Repositories` folder</string>
+				<string>Supprime tous les .DS_Store dans le dossier `~/Repositories`</string>
 				<key>text</key>
 				<string>DS_Store Killer</string>
 				<key>withspace</key>
