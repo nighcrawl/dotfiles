@@ -77,7 +77,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>cd ~/.dotfiles &amp;&amp; git pull origin master</string>
+				<string>cd ~/.dotfiles &amp;&amp; git pull --rebase origin master</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
