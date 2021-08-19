@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.ia.vscode</string>
+	<string>com.ia.iawplauncher</string>
 	<key>category</key>
-	<string>Productivity</string>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>425953F0-1313-40DC-A352-5A7CF09F6806</key>
@@ -27,11 +27,11 @@
 	<key>createdby</key>
 	<string>Ange Chierchia</string>
 	<key>description</key>
-	<string>Open website in VSCode</string>
+	<string>Ouvre un site IAWP dans VSCode</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Work on</string>
+	<string>IAWP Launcher</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -67,6 +67,7 @@
 cd ~/Repositories/$query
 code .
 cd wp-content/themes/iawp-child
+npm install
 gulp watch</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -103,6 +104,6 @@ gulp watch</string>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://chierchia.fr</string>
 </dict>
 </plist>

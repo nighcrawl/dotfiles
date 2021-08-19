@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>com.ia.vhost</string>
 	<key>category</key>
-	<string>Productivity</string>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>00F11AC5-1639-46C5-A4B8-126CD450BD25</key>
@@ -78,11 +78,11 @@
 	<key>createdby</key>
 	<string>Ange Chierchia</string>
 	<key>description</key>
-	<string>Create a new virtual host</string>
+	<string>Créer un nouveau vhost et relancer Apache</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>New Vhost</string>
+	<string>Virtual Host Utility</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -271,6 +271,6 @@ EOF</string>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://chierchia.fr</string>
 </dict>
 </plist>
