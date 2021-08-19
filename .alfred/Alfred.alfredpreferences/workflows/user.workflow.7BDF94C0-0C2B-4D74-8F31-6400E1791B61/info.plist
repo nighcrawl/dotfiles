@@ -8,11 +8,64 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>00F11AC5-1639-46C5-A4B8-126CD450BD25</key>
+		<array/>
 		<key>47860E20-5E32-4050-90A9-32903C065972</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>8D36F0E8-F54F-410A-A557-F842A7DC2321</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F44760EB-291C-4FA7-88E2-A654B74AE57E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8D36F0E8-F54F-410A-A557-F842A7DC2321</key>
+		<array/>
+		<key>C83B8CE2-DAE1-43D5-8763-CEB2A26A7048</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C849FA4C-E910-434E-A3AD-65E9DBD099D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C849FA4C-E910-434E-A3AD-65E9DBD099D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>00F11AC5-1639-46C5-A4B8-126CD450BD25</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F44760EB-291C-4FA7-88E2-A654B74AE57E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C83B8CE2-DAE1-43D5-8763-CEB2A26A7048</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -41,10 +94,28 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>query="{query}"
-cp /etc/apache2/sites-available/frontendstarter.conf /etc/apache2/sites-available/$query.tmp
-cd /etc/apache2/sites-available/
-sed 's/frontendstarter/"$query"/g' $query.tmp &gt; $query.conf
-rm -rf $query.tmp</string>
+accessLog="{query}_access"
+errorLog="{query}_error"
+
+cd /opt/homebrew/etc/httpd/sites-available
+touch $query.conf
+cat &gt;&gt; $query.conf &lt;&lt; EOF
+&lt;VirtualHost *:80&gt;
+	ServerName $query.loc
+
+	DocumentRoot /Users/achierchia/Repositories/$query
+	DirectoryIndex index.php index.html
+	&lt;Directory /Users/achierchia/Repositories/$query&gt;
+		Options -Indexes +FollowSymLinks +MultiViews
+		AllowOverride All
+		Require all granted
+	&lt;/Directory&gt;
+
+	LogLevel warn
+
+	ErrorLog /Users/achierchia/logs/$errorLog.log
+	CustomLog /Users/achierchia/logs/$accessLog.log combined
+&lt;/VirtualHost&gt;</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -80,24 +151,123 @@ rm -rf $query.tmp</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+cd ~/Repositories/etc/
+cp /etc/hosts hosts.txt
+cat &gt;&gt; hosts.txt &lt;&lt; EOF
+127.0.0.1    $query.loc www.$query.loc
+EOF</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F44760EB-291C-4FA7-88E2-A654B74AE57E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>brew services restart httpd</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>00F11AC5-1639-46C5-A4B8-126CD450BD25</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>sudo -S mv ~/Repositories/etc/hosts.txt /etc/hosts</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>C83B8CE2-DAE1-43D5-8763-CEB2A26A7048</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>10</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>C849FA4C-E910-434E-A3AD-65E9DBD099D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>00F11AC5-1639-46C5-A4B8-126CD450BD25</key>
+		<dict>
+			<key>xpos</key>
+			<integer>625</integer>
+			<key>ypos</key>
+			<integer>265</integer>
+		</dict>
 		<key>47860E20-5E32-4050-90A9-32903C065972</key>
 		<dict>
 			<key>xpos</key>
-			<integer>235</integer>
+			<integer>55</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>20</integer>
 		</dict>
 		<key>8D36F0E8-F54F-410A-A557-F842A7DC2321</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<integer>625</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>20</integer>
+		</dict>
+		<key>C83B8CE2-DAE1-43D5-8763-CEB2A26A7048</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>265</integer>
+		</dict>
+		<key>C849FA4C-E910-434E-A3AD-65E9DBD099D5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>550</integer>
+			<key>ypos</key>
+			<integer>295</integer>
+		</dict>
+		<key>F44760EB-291C-4FA7-88E2-A654B74AE57E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>265</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

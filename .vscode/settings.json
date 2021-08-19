@@ -1,55 +1,12 @@
 {
-  "oneDarkPro.editorTheme": "ayu",
-    "oneDarkPro.bold": true,
-    "editor.tokenColorCustomizations": {
-        "[One Dark Pro]": {
-            "textMateRules": [
-                {
-                    "name": "js object key",
-                    "scope": "meta.object-literal.key",
-                    "settings": {
-                    }
-                }
-            ]
-        }
-    },
-
+    "workbench.colorTheme": "One Dark Pro",
     "breadcrumbs.enabled": true,
     "editor.wordWrap": "on",
     "git.autofetch": true,
-    "csscomb.formatOnSave": true,
-    "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
+    "workbench.editorAssociations": {
+        "*": "default",
+        "*.png": "imagePreview.previewEditor"
     },
-    
-    "powermode.enabled": true,
-    "powermode.enableStatusBarComboTimer": false,
-    "powermode.enableShake": false,
-    "powermode.customExplosions": [
-        "https://media2.giphy.com/media/duExSjCrIxTT60Nycr/giphy.webp?cid=790b76111aaefa3c55fea2cefbf46e3f4ca1c5d7b0a44c8a&rid=giphy.webp",
-    ],
-    "powermode.explosionOrder": "sequential",
-    "powermode.explosionSize": 5,
-    "powermode.explosionFrequency": 1,
-    "powermode.maxExplosions": 1,
-    "powermode.explosionOffset": 0.4,
-    "powermode.gifMode": "continue",
-    "powermode.explosionDuration": 500,
-    "powermode.backgroundMode": "image",
-    "window.zoomLevel": 0,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-    "editor.mouseWheelZoom": true,
-    "debug.console.fontSize": 11,
-    "explorer.confirmDelete": false,
-    "workbench.preferredDarkColorTheme": "One Dark Pro",
-    "workbench.sideBar.location": "left",
-    "editor.formatOnType": true,
-    "editor.fontLigatures": true,
-    "editor.detectIndentation": false,
-    "editor.smoothScrolling": true,
-    "editor.tabSize": 2,
-    "html.format.indentInnerHtml": true,
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "security.workspace.trust.untrustedFiles": "open",
+    "liveServer.settings.donotShowInfoMsg": true
 }

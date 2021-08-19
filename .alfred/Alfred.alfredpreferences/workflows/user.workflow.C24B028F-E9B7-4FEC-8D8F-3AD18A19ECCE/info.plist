@@ -3,18 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.ac.dotfiles.upgrader</string>
+	<string>com.ac.dsstorekill</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</key>
-		<array/>
-		<key>B11B132B-4A61-4C05-8F4F-2111F454E6C6</key>
+		<key>E12734EE-C584-4AB1-A005-DDBF23089D23</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</string>
+				<string>FCAC674F-0954-4156-B9DA-6A8E969D8A92</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -27,73 +25,79 @@
 	<key>createdby</key>
 	<string>Ange Chierchia</string>
 	<key>description</key>
-	<string></string>
+	<string>Remove all .DS_Store files in the `Repositories folder</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Dotfiles upgrader</string>
+	<string>DS_Store Killer</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>keyword</key>
-				<string>dotfiles_upgrade</string>
+				<string>rmds</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Remove all .DS_Store files in the ~/Repositories` folder</string>
 				<key>text</key>
-				<string>Upgrade dotfiles</string>
+				<string>DS_Store Killer</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>B11B132B-4A61-4C05-8F4F-2111F454E6C6</string>
+			<string>E12734EE-C584-4AB1-A005-DDBF23089D23</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string>cd ~/.dotfiles
-git add .
-git commit -m "update dotfiles"
-git push origin master</string>
+				<string>cd ~/Repositories
+find . -type f \( -name ".DS_Store" -o -name "._.DS_Store" \) -delete -print 2&gt;&amp;1 | grep -v "Permission denied"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</string>
+			<string>FCAC674F-0954-4156-B9DA-6A8E969D8A92</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>26DA2609-8A71-4F58-B9BF-DFD55318CC6D</key>
+		<key>E12734EE-C584-4AB1-A005-DDBF23089D23</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>70</integer>
+			<integer>150</integer>
 		</dict>
-		<key>B11B132B-4A61-4C05-8F4F-2111F454E6C6</key>
+		<key>FCAC674F-0954-4156-B9DA-6A8E969D8A92</key>
 		<dict>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>420</integer>
 			<key>ypos</key>
-			<integer>70</integer>
+			<integer>150</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>chierchia.fr</string>
+	<string>https://chierchia.fr</string>
 </dict>
 </plist>
